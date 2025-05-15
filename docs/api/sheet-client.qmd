@@ -1,0 +1,64 @@
+---
+title: "SheetClient API"
+---
+
+# SheetClient Class Reference
+
+## Overview
+
+The `SheetClient` class handles all interactions with Google Sheets API, providing a high-level interface for sheet operations.
+
+## Class Methods
+
+### Constructor
+
+```python
+def __init__(self, credentials: Credentials)
+```
+
+Initializes a new SheetClient instance.
+
+### Sheet Operations
+
+```python
+def open_sheet(self, sheet_id_or_name: str) -> tuple[bool, str]
+```
+
+Opens a Google Sheet by ID or shortcut name.
+
+### Data Operations
+
+```python
+def update_cell(self, row: int, col: int, value: str) -> tuple[bool, str]
+```
+
+Updates a single cell value.
+
+```python
+def append_row(self, values: dict[int, str]) -> tuple[bool, str]
+```
+
+Appends a new row to the worksheet.
+
+### Batch Operations
+
+```python
+def push_changes(self) -> tuple[bool, str]
+```
+
+Pushes all pending changes to Google Sheets.
+
+## Implementation Details
+
+### Caching Strategy
+
+The client implements a caching mechanism to reduce API calls:
+
+```python
+self.cached_data: List[List[str]] = []
+self.pending_changes: Dict[str, List[PendingChange]] = defaultdict(list)
+```
+
+### Error Handling
+
+All methods return a tuple of (success, error_message) for consistent error handling. 

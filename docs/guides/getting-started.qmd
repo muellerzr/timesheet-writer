@@ -1,0 +1,48 @@
+---
+title: "Getting Started"
+---
+
+# Setting Up Google Sheets TUI
+
+## Prerequisites
+
+- Python 3.8 or higher
+- Google Cloud account
+- Google Sheets API enabled
+- OAuth 2.0 credentials
+
+## Installation Steps
+
+1. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+2. Install the package:
+```bash
+pip install -e .
+```
+
+## Google Cloud Setup
+
+1. Visit Google Cloud Console
+2. Create/select a project
+3. Enable Google Sheets API
+4. Configure OAuth consent screen
+5. Create OAuth 2.0 credentials
+6. Download credentials file
+
+## First Run
+
+1. Place credentials file:
+```bash
+mv credentials.json /path/to/project/
+```
+
+2. Run the application:
+```bash
+gsheet <sheet_id>
+```
+
+3. Complete OAuth flow in browser 

@@ -1,0 +1,57 @@
+---
+title: "Best Practices"
+---
+
+# Best Practices Guide
+
+## Data Entry
+
+### Time Entry
+- Use 't' key for automatic time insertion
+- Times are formatted as HH:MM
+- Always verify time entries before saving
+
+### Row Operations
+- Position cursor one row below last entry for new rows
+- Use 'i' to edit existing rows
+- Always review changes before saving
+
+## Performance Optimization
+
+### Batch Updates
+- Changes are batched automatically
+- Use 's' to manually save when needed
+- Avoid excessive individual saves
+
+### Caching
+- Data is cached locally
+- Refresh with manual save if needed
+- Clear cache by switching worksheets
+
+## Error Prevention
+
+### Data Validation
+- Verify column alignment
+- Check formula syntax
+- Review changes before saving
+
+### Recovery
+- Use ctrl+q to quit without saving if needed
+- Keep regular save points
+- Monitor error messages
+
+## Keyboard Navigation
+
+### Efficient Movement
+- Use arrow keys for navigation
+- Tab between sections
+- Use shortcuts for common operations
+
+### Common Operations
+```
+i - Edit row
+t - Insert time
+s - Save changes
+q - Quit and save
+ctrl+q - Quit without saving
+``` 

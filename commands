@@ -1,0 +1,2 @@
+mkdir -p docs/{api,guides,reference}
+touch docs/_quarto.yml docs/index.qmd 

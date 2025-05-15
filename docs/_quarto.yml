@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "!templates/"
+
+website:
+  title: "Google Sheets TUI Documentation"
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        file: index.qmd
+      - text: "Guides"
+        menu:
+          - text: "Getting Started"
+            file: guides/getting-started.qmd
+          - text: "Basic Usage"
+            file: guides/basic-usage.qmd
+          - text: "Advanced Features"
+            file: guides/advanced-features.qmd
+      - text: "API Reference"
+        menu:
+          - text: "SheetClient"
+            file: api/sheet-client.qmd
+          - text: "TUI Components"
+            file: api/tui-components.qmd
+      - text: "Best Practices"
+        file: reference/best-practices.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-fold: true
+    code-tools: true 
