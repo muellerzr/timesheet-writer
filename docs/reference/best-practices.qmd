@@ -49,9 +49,10 @@ title: "Best Practices"
 
 ### Common Operations
 ```
-i - Edit row
+e - Edit cell
 t - Insert time
-s - Save changes
+w - Switch worksheet
+n - New shortcut
 q - Quit and save
-ctrl+q - Quit without saving
+Q - Quit without saving (Shift + Q)
 ``` 

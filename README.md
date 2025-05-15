@@ -43,14 +43,12 @@ gsheet 1t54f4aRu9kQAW7r8FYV9pzJSqAs8-isc  # Using sheet ID directly
 ## Controls
 
 - Arrow keys: Navigate cells
-- i: Edit current row/Add new row
+- e: Edit current cell
 - t: Insert current time (HH:MM format)
-- s: Save changes
-- q: Quit and save
-- ctrl+q: Quit without saving
 - w: Switch worksheet
 - n: Create new shortcut
-- l: List shortcuts
+- q: Quit and save
+- Q: Quit without saving (Shift + Q)
 
 ## Editing Rows
 

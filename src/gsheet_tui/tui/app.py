@@ -73,16 +73,31 @@ class ShortcutScreen(Screen):
             table.add_row(name, sheet_id)
 
 class SheetEditor(App):
+    """A terminal user interface for editing Google Sheets."""
+    
     BINDINGS = [
-        Binding("q", "quit", "Quit"),
-        Binding("ctrl+q", "quit_without_save", "Quit (No Save)"),
-        Binding("i", "edit_row", "Edit Hours"),
-        Binding("s", "save_changes", "Save"),
-        Binding("w", "switch_worksheet", "Switch Worksheet"),
-        Binding("n", "new_shortcut", "New Shortcut"),
-        Binding("l", "list_shortcuts", "List Shortcuts"),
+        Binding("e", "edit_row", "Edit Cell"),
         Binding("t", "insert_time", "Insert Time"),
+        Binding("w", "switch_worksheet", "Switch Sheet"),
+        Binding("n", "new_shortcut", "New Shortcut"),
+        Binding("q", "quit", "Save & Quit"),
+        Binding("Q", "quit_without_save", "Quit (No Save)"),
     ]
+    
+    CSS = """
+    Screen {
+        align: center middle;
+    }
+    
+    DataTable {
+        height: 1fr;
+        border: solid green;
+    }
+    
+    Select {
+        width: 100%;
+    }
+    """
     
     def __init__(self, sheet_client: SheetClient):
         super().__init__()
